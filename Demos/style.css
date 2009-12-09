@@ -1,0 +1,161 @@
+/* @group other */
+
+body {
+  font-family: helvetica, verdana;
+  background: #e8e8e8;
+  color: #333;
+}
+
+.highlight {
+    color: #3875d7;
+}
+
+h1, h2 {
+    color: #888;
+}
+
+li {
+    margin-bottom: .5em;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+h1, h3, p {
+    padding: 10px;
+}
+
+ul {
+    margin-left: 1em;
+}
+
+li {
+    list-style: square;
+}
+
+div#center div.content {
+    background: #fff;
+}
+
+p {
+    color: #a8a8a8;
+}
+
+/* @end */
+
+/* @group handle styles */
+
+div.handle {
+    background: #333 url(grip.png) no-repeat;
+    z-index: 2;
+    position: absolute;
+}
+
+div.handle.horizontal {
+    top: 0;
+    bottom: 0;
+    width: 9px;
+    cursor: col-resize;
+    background-position: 2px center;
+}
+
+div.handle.vertical {
+    width: 100%;
+    height: 9px;
+    cursor: row-resize;
+    z-index: 1;
+    background-position: center -19px;
+}
+
+/* @end */
+
+/* @group Blocks */
+
+div.content {
+    overflow: auto;
+}
+
+div#container {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: #fff;
+    border: solid 9px #ccc;
+    overflow: auto;
+}
+
+div#left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 0;
+}
+
+div#left_handle {
+    left: 100px;    
+}
+
+div#center {
+    position: absolute;
+    left: 109px;
+    top: 0;
+    bottom: 0;
+    right: 109px;
+    overflow: hidden;
+    background: #fff;
+    z-index: 1;
+}
+
+div#center_top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+}
+
+div#center_top_handle {
+    top: 100px;
+}
+
+div#center_middle {
+    position: absolute;
+    top: 109px;
+    left: 0;
+    right: 0;
+    bottom: 109px;
+}
+
+div#center_bottom_handle {
+    bottom: 100px;
+}
+
+div#center_bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+}
+
+div#right_handle {
+    right: 100px;
+}
+
+div#right {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+/* @end */

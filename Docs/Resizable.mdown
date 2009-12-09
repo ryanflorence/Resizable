@@ -1,0 +1,80 @@
+Class: Resizable {#Resizable}
+=============================
+
+<big>Creates resizable user interface elements, stores and retrieves positions from cookies, and each instance is aware of neighboring instances so the resizable limits are dynamically set to avoid resizing over each other</big>
+
+### Extends:
+
+[Drag][drag]
+
+### Demo
+
+<iframe src="http://mooshell.net/rpflo/ry8vm/embedded/?tabs=result,js,html,css" style="width: 100%; height:475px"></iframe>
+
+
+Resizable Method: constructor {#Resizable:constructor}
+-------------------------------------------------------
+
+
+### Syntax:
+
+	var myResizable = new Resizable(element, options);
+
+### Arguments:
+
+1. element - (element) The handle to control the resizing
+2. options - (obj) The [Drag][drag] options plus the following:
+
+### Options:
+
+* mode - (string: defaults to `horizontal`) Accepts `horizontal` and `vertical`.
+
+### Example:
+
+    leftResize = new Resizable('left_handle',{
+    	limit: {x: [20,null]},
+    	cookie: 'leftResize'
+    });
+
+    rightResize = new Resizable('right_handle',{
+    	invert: true,
+    	cookie: 'rightResize'
+    });
+
+    centerTopResize = new Resizable('center_top_handle',{
+    	mode: 'vertical',
+    	cookie: 'centerTopResize'
+    });
+
+    centerBottomResize = new Resizable('center_bottom_handle',{
+    	invert: true,
+    	mode: 'vertical',
+    	cookie: 'centerBottomResize'
+    });
+
+    ResizableLimits.attach();
+
+### Note:
+
+Your elements need to be positioned absolutely within a container (or the body).  Handles need to be between the two elements you are resizing.  Check out the demo to see the HTML and CSS layout.
+
+Resizable Method: set {#Resizable:set}
+---------------------------------------
+
+<big>Directly resize the elements without dragging.</big>
+
+### Syntax:
+
+    myResize.set(distance);
+
+### Arguments:
+
+1. distance - (number) The distance to resize the elements in pixels.
+
+### Returns:
+
+This Resizable instance.
+
+[drag]: http://mootools.net/docs/more/Drag/Drag
+
+
